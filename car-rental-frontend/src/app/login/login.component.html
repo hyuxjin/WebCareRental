@@ -1,0 +1,35 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper teal darken-3">
+      <ul id="nav-mobile" class="left">
+        <!-- <li><a (click)="navigateTo('cars')">View Available Cars</a></li>
+        <li><a (click)="navigateTo('bookings')">Your Bookings</a></li>
+        <li><a (click)="navigateTo('account')">Notification</a></li>
+        <li><a (click)="logout()">Logout</a></li> -->
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <h4>Login</h4>
+  <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    <div class="input-field">
+      <input type="email" id="email" formControlName="email" class="validate" required />
+      <label for="email">Email</label>
+    </div>
+
+    <div class="input-field">
+      <input type="password" id="password" formControlName="password" class="validate" required />
+      <label for="password">Password</label>
+    </div>
+
+    <button type="submit" class="btn waves-effect waves-light">Login</button>
+  </form>
+
+  <div class="register-link" style="margin-top: 20px;">
+    <p>Don't have an account yet? 
+      <a (click)="navigateToRegister()">Register here</a>
+    </p>
+  </div>
+</div>

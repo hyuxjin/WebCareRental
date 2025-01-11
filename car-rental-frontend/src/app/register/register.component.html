@@ -1,0 +1,43 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper teal darken-3">
+    </div>
+  </nav>
+</div>
+
+
+<div class="container">
+  <h4>Register</h4>
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+    <div class="input-field">
+      <input type="text" id="name" formControlName="name" class="validate" required />
+      <label for="name">Full Name</label>
+    </div>
+
+    <div class="input-field">
+      <input type="email" id="email" formControlName="email" class="validate" required />
+      <label for="email">Email</label>
+    </div>
+
+    <div class="input-field">
+      <input type="password" id="password" formControlName="password" class="validate" required />
+      <label for="password">Password</label>
+    </div>
+
+    <div class="input-field">
+      <input type="password" id="confirmPassword" formControlName="confirmPassword" class="validate" required />
+      <label for="confirmPassword">Confirm Password</label>
+    </div>
+
+    <button type="submit" class="btn waves-effect waves-light">Register</button>
+    
+    <div class="register-link" style="margin-top: 20px;">
+      <p>Already have an account? 
+        <a (click)="navigateToLogin()">Login here</a>
+      </p>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+  </form>
+</div>

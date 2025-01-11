@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    background-color: #f8f9fa; /* Optional: Light background for the nav */
+    padding: 10px 0;
+  }
+  
+  .nav-bar {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;             /* Remove default margin */
+    padding: 0;            /* Remove default padding */
+    display: flex;         /* Align items horizontally */
+    justify-content: center; /* Center the nav items */
+    gap: 20px;             /* Add space between nav items */
+  }
+  
+  .nav-bar li {
+    display: inline;       /* Inline items */
+  }
+  
+  .nav-bar a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff;        /* Default link color */
+    font-weight: bold;     /* Bold text for emphasis */
+    padding: 5px 10px;     /* Add padding for clickability */
+    border-radius: 4px;    /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+  }
+  
+  .nav-bar a:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #ffffff;           /* Text color on hover */
+    cursor: pointer;
+  }
+  

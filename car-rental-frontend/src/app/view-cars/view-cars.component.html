@@ -1,0 +1,42 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper teal darken-3">
+      <ul id="nav-mobile" class="left">
+        <li><a (click)="navigateTo('cars')">View Available Cars</a></li>
+        <li><a (click)="navigateTo('bookings')">Your Bookings</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+  
+<h1 style="text-align: center; margin-top: 30px;">AVAILABLE CARS</h1>
+
+<table class="table table-striped">
+
+  <thead>
+      <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Model</th>
+          <th>Price Per Hour</th>
+          <th>Price Per Day</th>
+          <th>Status</th>
+          <th>Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let car of cars">
+          <td>{{ car.id }}</td>
+          <td>{{ car.name }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.pricePerHour }}</td>
+          <td>{{ car.pricePerDay }}</td>
+          <td>{{ car.isAvailable ? 'Available' : 'Unavailable' }}</td>
+          <td>
+              <button (click)="bookCar(car)" class="btn btn-primary btn-sm">Book</button>
+          </td>
+      </tr>
+  </tbody>
+</table>

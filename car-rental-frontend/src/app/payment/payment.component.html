@@ -1,0 +1,46 @@
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper teal darken-3">
+        <ul id="nav-mobile" class="left">
+          <li><a (click)="navigateTo('cars')">View Available Cars</a></li>
+          <li><a (click)="navigateTo('bookings')">Your Bookings</a></li>
+          <li><a (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="container">
+    <h2 class="center-align teal-text text-darken-3">Payment for Booking</h2>
+    
+    <h4 class="teal-text text-darken-3">Booking ID: {{ bookingId }}</h4>
+    
+    <label for="paymentMethod">Choose Payment Method:</label>
+    <div class="input-field">
+      <select id="paymentMethod" [(ngModel)]="paymentMethod" class="browser-default">
+        <option value="gcash">GCash</option>
+        <option value="card">Card</option>
+      </select>
+    </div>
+    
+    <div *ngIf="paymentMethod === 'gcash'" class="input-field">
+      <label for="gcashNumber">GCash Number:</label>
+      <input id="gcashNumber" type="text" [(ngModel)]="gcashNumber" placeholder="Enter your GCash number" />
+    </div>
+    
+    <div *ngIf="paymentMethod === 'card'">
+      <div class="input-field">
+        <label for="cardNumber">Card Number:</label>
+        <input id="cardNumber" type="text" [(ngModel)]="cardNumber" placeholder="Enter your card number" />
+      </div>
+      <div class="input-field">
+        <label for="expiryDate">Expiry Date:</label>
+        <input id="expiryDate" type="text" [(ngModel)]="expiryDate" placeholder="MM/YY" />
+      </div>
+    </div>
+    
+    <div class="center-align">
+      <button class="btn waves-effect waves-light teal darken-3" (click)="submitPayment()">Submit Payment</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,41 @@
+
+.form-group {
+  margin-bottom: 35px;
+
+}
+.row {
+  width: 100%;
+}
+#carList{
+  margin: 100px;
+  margin-left: 120px;
+  padding-left: 25px;
+}
+.container {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-bar li {
+  padding: 10px;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-bar li a:hover {
+  color: #007bff;  /* Example hover color */
+  cursor: pointer;
+}
+

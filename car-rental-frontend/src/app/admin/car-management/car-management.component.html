@@ -1,0 +1,89 @@
+<div class="navbar-fixed">
+    <nav class="navbar-fixed">
+    <div class="nav-wrapper teal darken-3">
+        <ul id="nav-mobile" class="left">
+            <li><a (click)="navigateTo('car-manage')">Car Manage</a></li>
+            <li><a (click)="navigateTo('booking-lists')">Booking Lists</a></li>
+            <li><a (click)="navigateTo('user-lists')">User Lists</a></li>
+            <li><a (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+    </nav>
+  </div>
+ 
+  
+<div class="container">
+    <h2 style="text-align: center;">Car Management</h2>
+    
+    <div class="row">
+        <!-- Adding Car Form -->
+        <div class="col-md-3" id="add_edit">
+            <h4 style="margin-top: 20px;">Add/Edit Car</h4>
+            <form [formGroup]="carForm" (ngSubmit)="saveCar()">
+                
+                <label for="name">Car Name</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="name">
+                </div>
+                
+                <label for="model">Model</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="model">
+                </div>
+                
+                <label for="pricePerHour">Price Per Hour</label>
+                <div class="form-group">
+                    <input type="number" class="form-control" formControlName="pricePerHour">
+                </div>
+                
+                <label for="pricePerDay">Price Per Day</label>
+                <div class="form-group">
+                    <input type="number" class="form-control" formControlName="pricePerDay">
+                </div>
+                
+                <label for="status">Availability</label>
+                <div class="form-group">
+                    <select class="form-control" formControlName="status">
+                        <option value="Available">Available</option>
+                        <option value="Unavailable">Unavailable</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary mt-2">Save</button>
+            </form>
+        </div>
+
+        <!-- List of Cars -->
+        <div class="col-md-7" style="margin-top: 30px;" id="carList">
+            <h4>List of Cars</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Model</th>
+                        <th>Price Per Hour</th>
+                        <th>Price Per Day</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let car of cars">
+                        <td>{{ car.id }}</td>
+                        <td>{{ car.name }}</td>
+                        <td>{{ car.model }}</td>
+                        <td>{{ car.pricePerHour }}</td>
+                        <td>{{ car.pricePerDay }}</td>
+                        <td>{{ car.isAvailable ? 'Available' : 'Unavailable' }}</td> <!-- Converts boolean to string -->
+                        <td>
+                            <button (click)="editCar(car)" class="btn btn-warning btn-sm" style="margin-right: 20px;">Edit</button>
+                            <button (click)="deleteCar(car.id)" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

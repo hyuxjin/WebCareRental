@@ -1,0 +1,7 @@
+.nav-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+}
