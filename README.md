@@ -1,4 +1,19 @@
 # WebCareRental
+
+- Install HeidiSQL
+- Install XAMPP
+
+- Run XAMPP and Start the MYSQL
+- Open HeidiSQL
+- Create New Session
+- Open
+- Find Manage User Authentication and previliges (2 human/people icon)
+- Click the username with root
+- Set password to root
+- Repeat password to root
+- Save and Close
+- Create new database named carrentaldb
+
 How to run the backend 
 
 - Get the file directory of backend project (WebCareRental)
