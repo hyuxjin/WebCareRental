@@ -17,7 +17,7 @@ export class AdminLoginComponent {
   errorMessage: string = '';  // To store any error messages
 
   constructor(private fb: FormBuilder, private apiService: ApiService, private router: Router) {
-    this.loginForm = this.fb.group({
+    this.loginForm = this.fb.group({  
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
