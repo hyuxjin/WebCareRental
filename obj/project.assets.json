@@ -4265,11 +4265,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Documents\\CarRentalAPI\\CarRentalAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\WebCareRental\\CarRentalAPI.csproj",
       "projectName": "CarRentalAPI",
-      "projectPath": "C:\\Users\\Administrator\\Documents\\CarRentalAPI\\CarRentalAPI.csproj",
+      "projectPath": "C:\\Users\\Administrator\\WebCareRental\\CarRentalAPI.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Documents\\CarRentalAPI\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\WebCareRental\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
